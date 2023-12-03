@@ -18,6 +18,13 @@
     "href": "index.html",
     "title": "Blog",
     "section": "",
-    "text": "How much does my professor swear?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNov 12, 2023\n\n\nKelby Bachman\n\n\n\n\n\n\nNo matching items"
+    "text": "Iowa’s Defense is ELITE\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDec 3, 2023\n\n\nKelby Bachman\n\n\n\n\n\n\n  \n\n\n\n\nHow much does my professor swear?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNov 12, 2023\n\n\nKelby Bachman\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/iowa's defense/index.html",
+    "href": "posts/iowa's defense/index.html",
+    "title": "Iowa’s Defense is ELITE",
+    "section": "",
+    "text": "Code\nlibrary(tidyverse)\nlibrary(ggbump)\n\noffense2019 &lt;- read_csv(\"~/R Studio/total_offense_2019.csv\")\noffense2020 &lt;- read_csv(\"~/Downloads/total_offense_2020.csv\")\noffense2021 &lt;- read_csv(\"~/Downloads/total_offense_2021.csv\")\noffense2022 &lt;- read_csv(\"~/Downloads/total_offense_2022.csv\")\noffense2023 &lt;- read_csv(\"~/Downloads/total_offense_2023.csv\")\ndefense2019 &lt;- read_csv(\"~/Downloads/total_defense_2019.csv\")\ndefense2020 &lt;- read_csv(\"~/Downloads/total_defense_2020.csv\")\ndefense2021 &lt;- read_csv(\"~/Downloads/total_defense_2021.csv\")\ndefense2022 &lt;- read_csv(\"~/Downloads/total_defense_2022.csv\")\ndefense2023 &lt;- read_csv(\"~/Downloads/total_defense_2023.csv\")\n\noffense &lt;- bind_rows(offense2019, offense2020, offense2021, offense2022, offense2023)\ndefense &lt;- bind_rows(defense2019, defense2020, defense2021, defense2022, defense2023)\n\niowa &lt;- offense |&gt;\n  filter(School == \"Iowa\")\n\niowa |&gt;\n  ggplot() +\n  geom_line(data=iowa, aes(x=Rk, y=Pts)) +\n  theme_minimal() +\n  labs(\n    x=\"Rank\",\n    y=\"Offense PPG\",\n    size=\"Total\",\n    title=\"Rank of Offense by Points\",\n    subtitle=\"Iowa's offense is laughably bad\",\n    caption=\"Source: Sports Ref. | By Kelby Bachman\"\n  )\n\n\n\n\n\n\n\nCode\niowad &lt;- defense |&gt;\n  filter(School == \"Iowa\")\n\niowad |&gt;\n  ggplot() +\n  geom_line(data=iowad, aes(x=Rk, y=Pts)) +\n  theme_minimal() +\n  labs(\n    x=\"Rank\",\n    y=\"Defense PPG Allowed\",\n    size=\"Total\",\n    title=\"Rank of defense by points allowed\",\n    subtitle=\"Iowa's defense is pretty freaking good\",\n    caption=\"Source: Sports Ref. | By Kelby Bachman\"\n  )\n\n\n\n\n\n\n\nCode\niowad |&gt;\n  ggplot() +\n  geom_bump(data=defense, aes(x=Rk, y=Pts)) +\n  geom_point(data=iowad, aes(x=Rk, y=Pts), color=\"yellow\") +\n  theme_minimal() +\n  labs(\n    x=\"Rank\",\n    y=\"Defense PPG Allowed\",\n    size=\"Total\",\n    title=\"Iowa D among the best\",\n    subtitle=\"Over the last 5 years, Iowa's D has been one of the best\",\n    caption=\"Source: Sports Ref. | By Kelby Bachman\"\n  )"
   }
 ]

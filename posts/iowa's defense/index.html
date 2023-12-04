@@ -177,6 +177,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+<p>Offense. A seven-letter word that everyone loves. No matter what sport it is, we all love offense. Baseball, basketball, wrestling, tennis, etc. Offense makes things exciting. Unless your an Iowa football fan. Then you’d rather see punting and defense. And you’re totally fine with that (for the most part). Would it kill Iowa to at least try and be more creative on offense? Spice things up a bit? Nevermind. Back to the point.</p>
+<p>As awful, putrid, pathetic, etc. as the Iowa offense has been, the defense has been the exact opposite. They’ve been dominant, aggressive, the backbone of the entire team. I would even say ELITE. Yes, that’s right. The Iowa defense is (and has been) ELITE. Over the last five years, I might go as far as to say they are the best in the nation, especially given how awful the offense has been. Let’s take a look at the data.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -217,6 +219,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>So, at one point, the Iowa offense did average almost 32 PPG, good enough to rank 40th in the nation. Oh, but did I mention that was the COVID year? So maybe put an asterisk next to that year. Remove that year and they have ranked 87, 99, 123 and 124. Ouch. So how about the defense? How good have they been?</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -240,13 +243,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>Yeah, they’ve been really good. They’ve ranked 5th, 6th, 13th, 2nd and 4th. It’s hard to put into words how remarkable those numbers are when you look at how bad the offense has been. The offense cannot sustain drives. They can’t put points on the board. But the defense just doesn’t let the other team score, either. So, how does this compare with other teams from around the country? Let’s have a look.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>iowad <span class="sc">|&gt;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bump</span>(<span class="at">data=</span>defense, <span class="fu">aes</span>(<span class="at">x=</span>Rk, <span class="at">y=</span>Pts)) <span class="sc">+</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>iowad, <span class="fu">aes</span>(<span class="at">x=</span>Rk, <span class="at">y=</span>Pts), <span class="at">color=</span><span class="st">"yellow"</span>) <span class="sc">+</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>iowad, <span class="fu">aes</span>(<span class="at">x=</span>Rk, <span class="at">y=</span>Pts), <span class="at">color=</span><span class="st">"red"</span>) <span class="sc">+</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Rank"</span>,</span>
@@ -261,6 +265,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>I know, I know. I chose red for a color. But that’s because yellow doesn’t show up as well. But the point is, over the last five years, the defense has been one of the best in the country. When you take into account at how the offense has been one of the worst in the country, it only magnifies how ridiculously good the defense has been.</p>
 
 
 
